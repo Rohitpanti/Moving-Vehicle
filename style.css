@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+}
+.sky{
+    height:100vh ;
+    width:100%;
+    background-image: url(background1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    
+}
+.trees{
+    height: 100vh;
+    width: 100%;
+    background-image: url(trees1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top:-29vh;
+}
+.track{
+    height: 80vh;
+    width: 800vw;
+    background-image: url(track.png);
+    background-repeat: repeat-x;
+    position: absolute;
+    top: 71vh;
+    animation: carMove linear 6s infinite;
+}
+
+.car{
+    height: 120px;
+    width: 380px;
+    background-image: url(Car_Body.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    right:450px;
+    bottom: 26vh;
+    animation: shake linear .4s infinite;
+}
+
+.wheel1 img{
+    width: 62px;
+    position: relative;
+    top: 65px;
+    right: -47px;
+    animation: wheelRotation linear .16s infinite;
+}
+
+.wheel2 img{
+    width: 67px;
+    position: relative;
+    top: -2px;
+    right: -285px;
+    animation: wheelRotation linear .16s infinite;
+}
+
+.car2{
+    height: 120px;
+    width: 380px;
+    background-image: url(Car_Body2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    left:450px;
+    bottom: 14vh;
+    animation: shake linear .4s infinite;
+}
+
+.wheel12 img{
+    width: 62px;
+    position: relative;
+    top: 44px;
+    right: -259px;
+    animation: wheelRotation linear .16s infinite
+}
+
+.wheel22 img{
+    width: 67px;
+    position: relative;
+    top: -28px;
+    left: 35px;
+    animation: wheelRotation linear .16s infinite;
+}
+
+@keyframes wheelRotation {
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes carMove{
+    100%{
+        transform:translateX(-500vw);
+    }
+}
+
+
+@keyframes shake{
+    0%{
+        transform:translateY(-5px);
+    }
+    50%{
+        transform:translateY(5px);
+    }
+    100%{
+        transform:translateY(-5px);
+    }
+}
